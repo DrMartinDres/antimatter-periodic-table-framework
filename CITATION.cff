@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+title: "Toward an Antimatter Periodic Table: A Preparedness Framework"
+message: "If you use this review candidate, cite it as below and update the DOI after final Zenodo publication."
+type: article
+authors:
+  - family-names: "Dres"
+    given-names: "Martin"
+  - family-names: "Dres"
+    given-names: "Emanuel"
+  - family-names: "Dres"
+    given-names: "Jonathan"
+year: 2026
+version: "v1.0.0-rc1"
+date-released: 2026-04-26
+repository-code: "https://github.com/DrMartinDres/antimatter-periodic-table-framework"
+abstract: >
+  This review candidate presents a CPT-isomorphic and epistemically extended
+  periodic-table framework for antimatter. It distinguishes experimentally
+  confirmed, theoretically expected, open, and speculative domains, and it treats
+  the split-cell table as the main representation of the current state of
+  knowledge.
+license: "CC-BY-4.0"
+keywords:
+  - antimatter
+  - periodic table
+  - CPT symmetry
+  - antihydrogen
+  - anti-atoms
+  - epistemic status
+  - preparedness framework

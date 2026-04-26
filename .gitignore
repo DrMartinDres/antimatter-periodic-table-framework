@@ -1,0 +1,58 @@
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# LaTeX / Tectonic intermediates
+*.aux
+*.bbl
+*.blg
+*.bcf
+*.fdb_latexmk
+*.fls
+*.glo
+*.glg
+*.gls
+*.ist
+*.log
+*.lof
+*.lot
+*.out
+*.run.xml
+*.dvi
+*.ps
+*.synctex.gz*
+*.toc
+*.xdv
+*.nav
+*.snm
+.tectonic-cache/
+
+# Project temp
+tmp/
+
+# Editor / backup files
+*~
+*.bak
+*.swp
+*.swo
+
+# Archives / exports (avoid accidentally committing release bundles)
+*.zip
+*.tar.gz
+*.tgz
+
+# IDE / AI tooling (local-only)
+.vscode/
+.idea/
+.cursor/
+.codex/
+.aider*
+*.code-workspace
+
+# Agents
+AGENTS.md
+

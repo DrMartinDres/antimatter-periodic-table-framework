@@ -1,0 +1,32 @@
+{
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "title": "Toward an Antimatter Periodic Table: A Preparedness Framework",
+  "description": "Local pre-Zenodo review candidate for a CPT-isomorphic and epistemically extended periodic-table framework for antimatter. DOI reservation, Zenodo upload, and Zenodo publication are deferred until after review approval.",
+  "creators": [
+    {
+      "name": "Dres, Martin"
+    },
+    {
+      "name": "Dres, Emanuel"
+    },
+    {
+      "name": "Dres, Jonathan"
+    }
+  ],
+  "keywords": [
+    "antimatter",
+    "periodic table",
+    "CPT symmetry",
+    "antihydrogen",
+    "anti-atoms",
+    "epistemic status",
+    "preparedness framework"
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "version": "v1.0.0-rc1",
+  "publication_date": "2026-04-26",
+  "notes": "Review candidate only. DOI: to be reserved before final Zenodo publication."
+}
