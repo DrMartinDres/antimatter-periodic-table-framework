@@ -30,6 +30,7 @@ __pycache__/
 *.nav
 *.snm
 .tectonic-cache/
+paper/Antimatter_Periodic_Table_Framework.pdf
 
 # Project temp
 tmp/
@@ -55,4 +56,3 @@ tmp/
 
 # Agents
 AGENTS.md
-

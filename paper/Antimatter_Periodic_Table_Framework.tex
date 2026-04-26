@@ -13,6 +13,7 @@
 \usepackage{tikz}
 \usepackage{pdflscape}
 \usepackage{float}
+\usepackage{needspace}
 \usepackage{hyperref}
 \usepackage{csquotes}
 \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
@@ -21,7 +22,7 @@
 
 \title{Toward an Antimatter Periodic Table:\\
 A Preparedness Framework}
-\author{Dr. Martin Dres \and Emanuel Dres \and Jonathan Dres}
+\author{Dr. Martin Dres (Independent Researcher)}
 \date{Version v1.0.0 -- 26 April 2026}
 
 \newcommand{\anti}[1]{\ensuremath{\overline{\mathrm{#1}}}}
@@ -50,6 +51,7 @@ Antimatter does not presently require a new chemical periodic law. Under the sta
 This work therefore proposes a CPT-isomorphic evidence-status and preparedness framework rather than an alternative periodic law. The framework separates theoretically expected periodicity from the experimental realization of individual antimatter systems. Its main representation is a split-cell table that combines classical periodic structure with an explicit evidence layer. This is a representation and evidence-status framework, not a claim of a new periodic law or established antimatter chemistry. Residual notation is reserved for measured pulls or explicitly defined hypothetical model values in named observables. The intended contribution is a cautious representation layer for future anti-atom, anti-ion, anti-molecule, and astrophysical antimatter searches.
 \end{abstract}
 
+\newpage
 \tableofcontents
 \newpage
 
@@ -362,6 +364,7 @@ The compact notation is
 
 for example $\antiH[1S\text{--}2S:\rho_{1S\text{--}2S}]$ (anti-H, 1S--2S) when a measured pull is being discussed. For the present framework table, the measured antihydrogen 1S--2S comparison is described in words as compatible with zero residual within uncertainty. For the \antiHe{} (anti-He) entry, where only antihelium nucleus evidence exists, the marker remains $N$ for antinucleus-only status. For higher unrealized anti-atoms, it remains $?$.
 
+\newpage
 \section{Source Basis for the Tables}
 \label{sec:source-basis}
 
@@ -391,11 +394,15 @@ Higher neutral anti-atoms and anti-molecules & CPT-based structure model plus av
 
 A useful representation must respect known periodicity and avoid overstating evidence. The split-cell table is the main figure for the current state of knowledge. The classical table is the implicit reference. Mirror layouts and residual maps are useful only as supplementary or didactic views: a mirror layout visualizes charge conjugation, not negative atomic numbers, and a residual map compares named observables rather than chemical groups.
 
+\needspace{8\baselineskip}
 \subsection{Split-Cell Antimatter Periodic Table}
 
-\input{ptable_epistemic_revised.tex}
+Figure~\ref{fig:ptable-split} shows the split-cell antimatter periodic-table
+framework used as the main representation in this manuscript. Each cell follows
+the classical position indexed by positive atomic number $Z$ and adds an
+evidence marker for the corresponding antimatter system.
 
-The split-cell representation is the main representation for the current framework. It separates the classical orbital-block structure from the experimental antimatter status. It makes four statements visible at once:
+The split-cell representation makes four statements visible at once:
 
 \begin{itemize}
   \item the periodic law is not reinvented;
@@ -409,6 +416,8 @@ C:\,(Z,e^-,N_Z)\mapsto (Z,e^+,\overline{N}_Z),
 \end{equation}
 
 not as $Z\mapsto -Z$. Residual notation, when used, should compare measured pulls such as $m/q$, the $1S$--$2S$ frequency, hyperfine structure, gravitational acceleration, ionization energy, or a reaction rate. It should not be used to visualize missing data.
+
+\input{ptable_epistemic_revised.tex}
 
 \subsection{Comparison}
 
@@ -486,6 +495,7 @@ The leading reduced-mass response is already given in Eq. \eqref{eq:reduced-mass
 
 As a practical rule, the split-cell table remains the preferred representation while level ordering and bonding topology remain unchanged. A residual overlay is appropriate only when a named observable has a measured pull or an explicitly defined hypothetical model value. A phase diagram would be appropriate only if a deviation were large enough to reorder relevant levels or bonding topology. Present precision measurements strongly constrain such scenarios; they are included here as representation logic, not as expected physics.
 
+\newpage
 \section{Conclusion}
 
 An antimatter periodic table is not currently supported as a new chemical periodic law, and CPT symmetry gives no reason to expect one. It is useful as a CPT-isomorphic evidence-status and preparedness framework: it makes visible that antihydrogen is experimentally well anchored, antihelium-nucleus evidence is presently nuclear rather than neutral-atomic, and the wider anti-atom and antimatter-chemistry landscape remains largely open.
@@ -500,7 +510,9 @@ The framework is intended as a conservative representation layer for current evi
 
 \section*{Acknowledgements}
 
-This work was partially supported by AI-assisted tools for structuring and drafting.
+The author gratefully acknowledges Emanuel Dres for originating the core idea
+that inspired this framework, and Jonathan Dres for valuable discussions and
+curiosity during its development.
 
 \section*{Code Availability}
 

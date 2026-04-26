@@ -5,10 +5,6 @@ type: article
 authors:
   - family-names: "Dres"
     given-names: "Martin"
-  - family-names: "Dres"
-    given-names: "Emanuel"
-  - family-names: "Dres"
-    given-names: "Jonathan"
 year: 2026
 version: "v1.0.0"
 date-released: 2026-04-26

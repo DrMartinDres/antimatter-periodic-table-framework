@@ -2,13 +2,11 @@
 
 Version: `v1.0.0`
 DOI: none assigned
-License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+License: CC BY 4.0
 
 ## Authors
 
-- Dr. Martin Dres
-- Emanuel Dres
-- Jonathan Dres
+- Dr. Martin Dres (Independent Researcher)
 
 ## Overview
 
@@ -68,33 +66,28 @@ not be read as negative atomic numbers or as a second periodic law.
 
 Full-size exports of the main split-cell figure are available as:
 
-- `figures/split_cell_table_v1.0.0.pdf`
 - `figures/split_cell_table_v1.0.0.svg`
 - `figures/split_cell_table_v1.0.0.png`
+
+The release manuscript PDF is available as
+`paper/Antimatter_Periodic_Table_Framework_v1.0.0.pdf`.
 
 ## Repository Structure
 
 - `paper/` - English LaTeX manuscript and compiled PDF
-- `figures/` - generated figures used by the manuscript, including full-size
-  split-cell table exports
+- `figures/` - generated SVG/PNG exports of the main split-cell table
 - `data/` - element status table
-- `models/` - conceptual model notes
 - `scripts/` - reproducible figure build helper
-- `docs/de/` - German working drafts, not part of the public English release
 
 ## Citation
 
-Dres, M., Dres, E., & Dres, J. (2026). *Toward an Antimatter Periodic Table: A
-Preparedness Framework.* Version `v1.0.0`.
+Dres, M. (2026). *Toward an Antimatter Periodic Table: A Preparedness
+Framework.* Version `v1.0.0`.
 
 ## Release Status
 
-This repository state is prepared as version `v1.0.0` and is released without a
-DOI. A DOI-bearing archival release may be prepared separately in the future.
-
-Before any public release, run the release checks described in `AGENTS.md` and
-confirm that no release-relevant files contain German text, unresolved archival
-identifier placeholders, or claims implying a new chemical periodic law.
+This repository release is version `v1.0.0` and is released without a DOI. A
+DOI-bearing archival release may be prepared separately in the future.
 
 ## License
 

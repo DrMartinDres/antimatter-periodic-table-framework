@@ -13,14 +13,6 @@ LEGACY_TECTONIC = Path(
     "/Users/martindres/.gemini/antigravity/brain/b891fbf2-924c-4580-a462-49df42b1b7c7/scratch/tectonic"
 )
 
-FIGURES = {
-    "periodic_table_reference": "ptable_standard.tex",
-    "antimatter_periodic_table_status": "ptable_epistemic_revised.tex",
-    "split_cell_representation": "ptable_split.tex",
-    "deviation_model": "ptable_asymmetry.tex",
-    "antinuclide_mapping": "ptable_mirrored.tex",
-}
-
 FULLSIZE_SPLIT_CELL = "split_cell_table_v1.0.0"
 
 PREAMBLE = r"""\documentclass[11pt,a4paper]{article}
@@ -65,17 +57,6 @@ def main() -> None:
     paper_input_path = os.path.relpath(PAPER_DIR, TMP_DIR).replace(os.sep, "/")
     input_search_path = f"\\makeatletter\\def\\input@path{{{{{paper_input_path}/}}}}\\makeatother\n"
 
-    for output_name, input_name in FIGURES.items():
-        wrapper = TMP_DIR / f"{output_name}.tex"
-        input_path = os.path.relpath(PAPER_DIR / input_name, TMP_DIR)
-        wrapper.write_text(
-            PREAMBLE + input_search_path + f"\\input{{{input_path}}}\n" + POSTAMBLE,
-            encoding="utf-8",
-        )
-
-        subprocess.run([tectonic, wrapper.name], cwd=TMP_DIR, check=True)
-        shutil.copy2(TMP_DIR / f"{output_name}.pdf", FIGURES_DIR / f"{output_name}.pdf")
-
     core_input_path = os.path.relpath(PAPER_DIR / "ptable_split_core.tex", TMP_DIR)
     core_wrapper = TMP_DIR / f"{FULLSIZE_SPLIT_CELL}.tex"
     core_wrapper.write_text(
@@ -96,8 +77,6 @@ def main() -> None:
         shutil.move(split_pdf, uncropped_pdf)
         subprocess.run([pdfcrop, "--margins", "8", str(uncropped_pdf), str(cropped_pdf)], check=True)
         export_pdf = cropped_pdf
-    shutil.copy2(export_pdf, FIGURES_DIR / f"{FULLSIZE_SPLIT_CELL}.pdf")
-
     try:
         import pypdfium2 as pdfium
 
@@ -122,14 +101,10 @@ def main() -> None:
     except Exception as exc:
         print(f"skipped PNG/SVG export: {exc}")
 
-    built = [f"{name}.pdf" for name in FIGURES]
-    built.extend(
-        [
-            f"{FULLSIZE_SPLIT_CELL}.pdf",
-            f"{FULLSIZE_SPLIT_CELL}.svg",
-            f"{FULLSIZE_SPLIT_CELL}.png",
-        ]
-    )
+    built = [
+        f"{FULLSIZE_SPLIT_CELL}.svg",
+        f"{FULLSIZE_SPLIT_CELL}.png",
+    ]
     print("built " + ", ".join(built))
 
 
