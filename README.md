@@ -1,7 +1,7 @@
 # Toward an Antimatter Periodic Table
 
-Local review candidate: `v1.0.0-rc2`  
-DOI: to be reserved before final Zenodo publication  
+Version: `v1.0.0`
+DOI: none assigned
 License: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 ## Authors
@@ -14,8 +14,13 @@ License: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 This repository develops a scientific framework for an antimatter periodic table.
 It does not propose a new chemical periodic law. Instead, it treats the
-antimatter periodic table as a CPT-isomorphic evidence-status framework over the
-classical periodic table.
+antimatter periodic table as a CPT-isomorphic evidence-status and preparedness
+framework over the classical periodic table.
+
+This repository release does not claim that antimatter has a distinct chemical
+periodic law. The table is an evidence-status representation. Neutral
+antihelium atoms and heavier neutral anti-atoms are not claimed as
+experimentally realized.
 
 The framework separates four domains:
 
@@ -24,7 +29,8 @@ The framework separates four domains:
 - theoretically expected structures, based on CPT symmetry and established
   atomic physics;
 - open or experimentally unverified systems, including neutral anti-atoms beyond
-  antihydrogen, anti-ions, anti-molecules, and antimatter chemistry;
+  antihydrogen, anti-ions, anti-molecules, and prospective antimatter-chemistry
+  questions;
 - speculative domains, such as large astrophysical antimatter structures or
   hypothetical deviations from matter-antimatter symmetry.
 
@@ -32,22 +38,22 @@ The framework separates four domains:
 
 The central claim is deliberately conservative:
 
-> The antimatter periodic table is a CPT-isomorphic preparedness framework, not
-> a new periodic law.
+> The antimatter periodic table is a CPT-isomorphic evidence-status and
+> preparedness framework, not a new periodic law.
 
-In the manuscript, the formal contribution is described more narrowly as a
-CPT-isomorphic evidence-status framework. Preparedness is the broader motivation
-for future anti-atom, anti-ion, anti-molecule, and astrophysical searches.
+In the manuscript, evidence status is the formal representation layer.
+Preparedness is the broader motivation for future anti-atom, anti-ion,
+anti-molecule, and astrophysical searches.
 
 Under CPT symmetry, isolated anti-atoms are expected to share the internal
 spectral and orbital structure of their matter counterparts. The open problem is
 not a replacement for chemical periodicity, but the experimental realization,
-storage, characterization, and chemical study of antimatter systems beyond
-antihydrogen.
+storage, characterization, and eventual chemical study of antimatter systems
+beyond antihydrogen.
 
 ## Main Representation
 
-The release candidate uses a split-cell table as the main representation. Each
+Version `v1.0.0` uses a split-cell table as the main representation. Each
 cell separates:
 
 - the classical orbital/block structure indexed by positive atomic number `Z`;
@@ -60,40 +66,35 @@ and triage heuristic only. It is not the manuscript's formal evidence vector.
 Mirror or dual layouts are didactic views of charge conjugation only. They must
 not be read as negative atomic numbers or as a second periodic law.
 
+Full-size exports of the main split-cell figure are available as:
+
+- `figures/split_cell_table_v1.0.0.pdf`
+- `figures/split_cell_table_v1.0.0.svg`
+- `figures/split_cell_table_v1.0.0.png`
+
 ## Repository Structure
 
-- `paper/` - English LaTeX manuscript and compiled review PDF
-- `figures/` - generated PDF figures used for review
+- `paper/` - English LaTeX manuscript and compiled PDF
+- `figures/` - generated figures used by the manuscript, including full-size
+  split-cell table exports
 - `data/` - element status table
 - `models/` - conceptual model notes
 - `scripts/` - reproducible figure build helper
-- `docs/de/` - German working drafts, not part of the English release candidate
+- `docs/de/` - German working drafts, not part of the public English release
 
 ## Citation
 
-For review purposes, cite:
-
 Dres, M., Dres, E., & Dres, J. (2026). *Toward an Antimatter Periodic Table: A
-Preparedness Framework.* Local review candidate `v1.0.0-rc2`. DOI: to be
-reserved before final Zenodo publication.
-
-The final public citation should be updated after the Zenodo DOI has been
-reserved and inserted into the manuscript and metadata.
+Preparedness Framework.* Version `v1.0.0`.
 
 ## Release Status
 
-This repository state is intended for local pre-Zenodo review only.
-
-Deferred actions:
-
-- DOI reservation
-- Zenodo upload
-- Zenodo publication
-- GitHub release tagging for the final public record
+This repository state is prepared as version `v1.0.0` and is released without a
+DOI. A DOI-bearing archival release may be prepared separately in the future.
 
 Before any public release, run the release checks described in `AGENTS.md` and
-confirm that no release-relevant files contain German text, DOI placeholders, or
-claims implying a new chemical periodic law.
+confirm that no release-relevant files contain German text, unresolved archival
+identifier placeholders, or claims implying a new chemical periodic law.
 
 ## License
 

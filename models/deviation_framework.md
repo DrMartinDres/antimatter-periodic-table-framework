@@ -18,7 +18,7 @@ rho_O(overline(E_Z)) =
 - `rho_O < 0`: significant negative residual.
 - `rho_O > 0`: significant positive residual.
 - `?`: unmeasured, not a deviation.
-- `K`: antinucleus known, neutral anti-atom not established.
+- `N`: antinucleus-only evidence, neutral anti-atom not established.
 
 ## Deviation Classes
 
@@ -41,4 +41,4 @@ overline(H)[1S-2S:rho_1S-2S]
 
 In the current table, antihydrogen spectroscopy should be described in words as
 compatible with zero within current uncertainty. The `overline(He)` entry, where
-only antihelium nucleus evidence exists, remains `K`, not a residual.
+only antihelium-nucleus evidence exists, remains `N`, not a residual.

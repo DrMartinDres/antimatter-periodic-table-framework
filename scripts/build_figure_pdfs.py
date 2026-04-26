@@ -1,3 +1,4 @@
+import base64
 import os
 import shutil
 import subprocess
@@ -20,6 +21,8 @@ FIGURES = {
     "antinuclide_mapping": "ptable_mirrored.tex",
 }
 
+FULLSIZE_SPLIT_CELL = "split_cell_table_v1.0.0"
+
 PREAMBLE = r"""\documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -40,6 +43,11 @@ PREAMBLE = r"""\documentclass[11pt,a4paper]{article}
 \begin{document}
 """
 
+FULLSIZE_PREAMBLE = PREAMBLE.replace(
+    r"\usepackage[a4paper,margin=1.2cm]{geometry}",
+    r"\usepackage[a3paper,landscape,margin=1.2cm]{geometry}",
+)
+
 POSTAMBLE = r"""
 \end{document}
 """
@@ -54,16 +62,75 @@ def main() -> None:
 
     FIGURES_DIR.mkdir(exist_ok=True)
     TMP_DIR.mkdir(parents=True, exist_ok=True)
+    paper_input_path = os.path.relpath(PAPER_DIR, TMP_DIR).replace(os.sep, "/")
+    input_search_path = f"\\makeatletter\\def\\input@path{{{{{paper_input_path}/}}}}\\makeatother\n"
 
     for output_name, input_name in FIGURES.items():
         wrapper = TMP_DIR / f"{output_name}.tex"
         input_path = os.path.relpath(PAPER_DIR / input_name, TMP_DIR)
-        wrapper.write_text(PREAMBLE + f"\\input{{{input_path}}}\n" + POSTAMBLE, encoding="utf-8")
+        wrapper.write_text(
+            PREAMBLE + input_search_path + f"\\input{{{input_path}}}\n" + POSTAMBLE,
+            encoding="utf-8",
+        )
 
         subprocess.run([tectonic, wrapper.name], cwd=TMP_DIR, check=True)
         shutil.copy2(TMP_DIR / f"{output_name}.pdf", FIGURES_DIR / f"{output_name}.pdf")
 
-    print("built " + ", ".join(f"{name}.pdf" for name in FIGURES))
+    core_input_path = os.path.relpath(PAPER_DIR / "ptable_split_core.tex", TMP_DIR)
+    core_wrapper = TMP_DIR / f"{FULLSIZE_SPLIT_CELL}.tex"
+    core_wrapper.write_text(
+        FULLSIZE_PREAMBLE
+        + input_search_path
+        + f"\\begin{{center}}\\input{{{core_input_path}}}\\end{{center}}\n"
+        + POSTAMBLE,
+        encoding="utf-8",
+    )
+    subprocess.run([tectonic, core_wrapper.name], cwd=TMP_DIR, check=True)
+
+    split_pdf = TMP_DIR / f"{FULLSIZE_SPLIT_CELL}.pdf"
+    export_pdf = split_pdf
+    pdfcrop = shutil.which("pdfcrop")
+    if pdfcrop is not None:
+        cropped_pdf = TMP_DIR / f"{FULLSIZE_SPLIT_CELL}.pdf"
+        uncropped_pdf = TMP_DIR / f"{FULLSIZE_SPLIT_CELL}-uncropped.pdf"
+        shutil.move(split_pdf, uncropped_pdf)
+        subprocess.run([pdfcrop, "--margins", "8", str(uncropped_pdf), str(cropped_pdf)], check=True)
+        export_pdf = cropped_pdf
+    shutil.copy2(export_pdf, FIGURES_DIR / f"{FULLSIZE_SPLIT_CELL}.pdf")
+
+    try:
+        import pypdfium2 as pdfium
+
+        pdf = pdfium.PdfDocument(str(export_pdf))
+        bitmap = pdf[0].render(scale=4.0)
+        image = bitmap.to_pil()
+        png_path = FIGURES_DIR / f"{FULLSIZE_SPLIT_CELL}.png"
+        svg_path = FIGURES_DIR / f"{FULLSIZE_SPLIT_CELL}.svg"
+        image.save(png_path)
+        encoded_png = base64.b64encode(png_path.read_bytes()).decode("ascii")
+        svg_path.write_text(
+            (
+                "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
+                f"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"{image.width}\" "
+                f"height=\"{image.height}\" viewBox=\"0 0 {image.width} {image.height}\">\n"
+                f"  <image width=\"{image.width}\" height=\"{image.height}\" "
+                f"href=\"data:image/png;base64,{encoded_png}\"/>\n"
+                "</svg>\n"
+            ),
+            encoding="utf-8",
+        )
+    except Exception as exc:
+        print(f"skipped PNG/SVG export: {exc}")
+
+    built = [f"{name}.pdf" for name in FIGURES]
+    built.extend(
+        [
+            f"{FULLSIZE_SPLIT_CELL}.pdf",
+            f"{FULLSIZE_SPLIT_CELL}.svg",
+            f"{FULLSIZE_SPLIT_CELL}.png",
+        ]
+    )
+    print("built " + ", ".join(built))
 
 
 if __name__ == "__main__":
