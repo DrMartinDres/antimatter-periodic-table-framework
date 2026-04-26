@@ -1,12 +1,13 @@
 cff-version: 1.2.0
 title: "Toward an Antimatter Periodic Table: A Preparedness Framework"
-message: "If you use this repository release, cite version v1.0.0 as below. This release has no DOI."
+message: "If you use this repository release, cite version v1.0.1 as below."
 type: article
 authors:
   - family-names: "Dres"
     given-names: "Martin"
 year: 2026
-version: "v1.0.0"
+version: "v1.0.1"
+doi: 10.5281/zenodo.19797170
 date-released: 2026-04-26
 repository-code: "https://github.com/DrMartinDres/antimatter-periodic-table-framework"
 abstract: >

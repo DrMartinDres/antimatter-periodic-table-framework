@@ -13,7 +13,7 @@ LEGACY_TECTONIC = Path(
     "/Users/martindres/.gemini/antigravity/brain/b891fbf2-924c-4580-a462-49df42b1b7c7/scratch/tectonic"
 )
 
-FULLSIZE_SPLIT_CELL = "split_cell_table_v1.0.0"
+FULLSIZE_SPLIT_CELL = "split_cell_table_v1.0.1"
 
 PREAMBLE = r"""\documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}

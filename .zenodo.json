@@ -2,7 +2,7 @@
   "upload_type": "publication",
   "publication_type": "preprint",
   "title": "Toward an Antimatter Periodic Table: A Preparedness Framework",
-  "description": "Version v1.0.0 of a CPT-isomorphic evidence-status and preparedness framework for antimatter. The framework distinguishes experimentally confirmed, theoretically expected, open, and speculative domains and uses the split-cell table as the main representation of the current state of knowledge.",
+  "description": "Version v1.0.1 of a CPT-isomorphic evidence-status and preparedness framework for antimatter. The framework distinguishes experimentally confirmed, theoretically expected, open, and speculative domains and uses the split-cell table as the main representation of the current state of knowledge. Zenodo DOI: 10.5281/zenodo.19797170.",
   "creators": [
     {
       "name": "Dres, Martin"
@@ -20,6 +20,6 @@
   "license": "cc-by-4.0",
   "access_right": "open",
   "language": "eng",
-  "version": "v1.0.0",
+  "version": "v1.0.1",
   "publication_date": "2026-04-26"
 }

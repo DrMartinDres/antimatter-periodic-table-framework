@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.1 - 2026-04-26
+
+- Added Zenodo DOI to README, CITATION metadata, and the paper title page.
+- Built and published the DOI-bearing paper PDF and repository figure exports.
+
 ## v1.0.0 - 2026-04-26
 
 - First public repository release without DOI.

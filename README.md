@@ -1,7 +1,8 @@
 # Toward an Antimatter Periodic Table
 
-Version: `v1.0.0`
-DOI: none assigned
+DOI: https://doi.org/10.5281/zenodo.19797170
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19797170.svg)](https://doi.org/10.5281/zenodo.19797170)
+Version: `v1.0.1`
 License: CC BY 4.0
 
 ## Authors
@@ -51,7 +52,7 @@ beyond antihydrogen.
 
 ## Main Representation
 
-Version `v1.0.0` uses a split-cell table as the main representation. Each
+Version `v1.0.1` uses a split-cell table as the main representation. Each
 cell separates:
 
 - the classical orbital/block structure indexed by positive atomic number `Z`;
@@ -66,11 +67,11 @@ not be read as negative atomic numbers or as a second periodic law.
 
 Full-size exports of the main split-cell figure are available as:
 
-- `figures/split_cell_table_v1.0.0.svg`
-- `figures/split_cell_table_v1.0.0.png`
+- `figures/split_cell_table_v1.0.1.svg`
+- `figures/split_cell_table_v1.0.1.png`
 
 The release manuscript PDF is available as
-`paper/Antimatter_Periodic_Table_Framework_v1.0.0.pdf`.
+`paper/Antimatter_Periodic_Table_Framework_v1.0.1.pdf`.
 
 ## Repository Structure
 
@@ -82,12 +83,12 @@ The release manuscript PDF is available as
 ## Citation
 
 Dres, M. (2026). *Toward an Antimatter Periodic Table: A Preparedness
-Framework.* Version `v1.0.0`.
+Framework.* Version `v1.0.1`. DOI: https://doi.org/10.5281/zenodo.19797170
 
 ## Release Status
 
-This repository release is version `v1.0.0` and is released without a DOI. A
-DOI-bearing archival release may be prepared separately in the future.
+This repository release is version `v1.0.1` and is archived on Zenodo under DOI
+https://doi.org/10.5281/zenodo.19797170.
 
 ## License
 
