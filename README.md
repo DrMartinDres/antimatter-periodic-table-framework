@@ -1,6 +1,6 @@
 # Toward an Antimatter Periodic Table
 
-Local review candidate: `v1.0.0-rc1`  
+Local review candidate: `v1.0.0-rc2`  
 DOI: to be reserved before final Zenodo publication  
 License: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
@@ -14,8 +14,8 @@ License: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 This repository develops a scientific framework for an antimatter periodic table.
 It does not propose a new chemical periodic law. Instead, it treats the
-antimatter periodic table as a CPT-isomorphic extension of the classical periodic
-table with an explicit epistemic layer.
+antimatter periodic table as a CPT-isomorphic evidence-status framework over the
+classical periodic table.
 
 The framework separates four domains:
 
@@ -35,6 +35,10 @@ The central claim is deliberately conservative:
 > The antimatter periodic table is a CPT-isomorphic preparedness framework, not
 > a new periodic law.
 
+In the manuscript, the formal contribution is described more narrowly as a
+CPT-isomorphic evidence-status framework. Preparedness is the broader motivation
+for future anti-atom, anti-ion, anti-molecule, and astrophysical searches.
+
 Under CPT symmetry, isolated anti-atoms are expected to share the internal
 spectral and orbital structure of their matter counterparts. The open problem is
 not a replacement for chemical periodicity, but the experimental realization,
@@ -47,8 +51,11 @@ The release candidate uses a split-cell table as the main representation. Each
 cell separates:
 
 - the classical orbital/block structure indexed by positive atomic number `Z`;
-- the epistemic status of the corresponding antimatter system;
+- the evidence status of the corresponding antimatter system;
 - residual or deviation information only when a named observable has data.
+
+The `confidence` column in `data/element_status_table.csv` is a visualization
+and triage heuristic only. It is not the manuscript's formal evidence vector.
 
 Mirror or dual layouts are didactic views of charge conjugation only. They must
 not be read as negative atomic numbers or as a second periodic law.
@@ -67,7 +74,7 @@ not be read as negative atomic numbers or as a second periodic law.
 For review purposes, cite:
 
 Dres, M., Dres, E., & Dres, J. (2026). *Toward an Antimatter Periodic Table: A
-Preparedness Framework.* Local review candidate `v1.0.0-rc1`. DOI: to be
+Preparedness Framework.* Local review candidate `v1.0.0-rc2`. DOI: to be
 reserved before final Zenodo publication.
 
 The final public citation should be updated after the Zenodo DOI has been

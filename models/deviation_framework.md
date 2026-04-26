@@ -8,10 +8,13 @@ Missing evidence is not treated as a physical deviation.
 For an observable `O`, the dimensionless residual is:
 
 ```text
-rho_O(overline(E_Z)) = (O_antimatter(Z) - O_matter(Z)) / sigma_O(Z)
+rho_O(overline(E_Z)) =
+  (O_antimatter(Z) - O_matter(Z)) / sigma_O(Z)
 ```
 
-- `rho_O ~= 0`: compatible with CPT expectations within uncertainty.
+- `sigma_O`: combined experimental and reference uncertainty for the comparison.
+- `rho_O` compatible with zero: compatible with CPT expectations within
+  finite uncertainty, not an exact zero residual.
 - `rho_O < 0`: significant negative residual.
 - `rho_O > 0`: significant positive residual.
 - `?`: unmeasured, not a deviation.
@@ -33,9 +36,9 @@ overline(E_Z)[O:rho_O]
 Example:
 
 ```text
-overline(H)[1S-2S:0]
+overline(H)[1S-2S:rho_1S-2S]
 ```
 
-This marks antihydrogen spectroscopy as compatible with the matter reference
-within current uncertainty. Antihelium without a neutral anti-atom remains `K`,
-not a residual.
+In the current table, antihydrogen spectroscopy should be described in words as
+compatible with zero within current uncertainty. The `overline(He)` entry, where
+only antihelium nucleus evidence exists, remains `K`, not a residual.
